@@ -1,0 +1,16 @@
+# mem0-service 直接依赖（版本取自实际运行的 venv）
+# embedder 走 huggingface provider，torch/sentence-transformers 是 mem0ai 的传递依赖，
+# 想用 GPU 推理请按本机 CUDA 版本单独装 torch（https://pytorch.org/get-started/locally/）。
+mem0ai==2.2.1
+fastapi==0.165.0
+uvicorn==0.54.0
+python-dotenv==1.2.4
+pydantic==2.14.4
+
+# 向量库 pgvector + 本地 embedding
+sentence-transformers==6.3.0
+psycopg2-binary
+
+# LLM 调用（mem0 的 openai provider）
+openai==3.57.0
+httpx==0.28.1

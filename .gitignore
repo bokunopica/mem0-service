@@ -1,0 +1,22 @@
+# 密钥与本地数据 —— 绝不入库
+.env
+.env.*
+!.env.example
+
+# Python 虚拟环境 / 缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 运行时数据（mem0 history store、日志）
+history.db
+*.db
+*.sqlite3
+*.log
+
+# 编辑器 / 系统
+.idea/
+.vscode/
+.DS_Store
